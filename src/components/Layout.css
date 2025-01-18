@@ -1,0 +1,12 @@
+.layout-container {
+    width: 100%;
+    min-height: 100%
+}
+
+.route-container {
+    width: 100%;
+    max-width: 32rem;
+    margin: auto;
+    padding: 0 1rem 0 1rem;
+    box-sizing: border-box;
+}

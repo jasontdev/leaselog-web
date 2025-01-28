@@ -31,7 +31,8 @@ function App() {
         <Routes>
           <Route index element={<ProtectedRoute user={user} authenticating={authenticating}><Home/></ProtectedRoute>}/>
           <Route path="login" element={<Login/>}/>
-          <Route path="leases" element={<ProtectedRoute user={user} authenticating={authenticating}><Leases/></ProtectedRoute>}/>
+          <Route path="leases"
+                 element={<ProtectedRoute user={user} authenticating={authenticating}><Leases/></ProtectedRoute>}/>
           <Route path="payments"
                  element={<ProtectedRoute user={user} authenticating={authenticating}><Payments/></ProtectedRoute>}/>
           <Route path="contacts"
@@ -42,4 +43,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

@@ -8,7 +8,7 @@ type TopBarProps = {
 }
 
 export default function NavBar({user}: TopBarProps) {
-  if(!user) {
+  if (!user) {
     return (
       <nav className="navbar">
         <div className="navbar-brand">LeaseLog</div>
@@ -20,7 +20,7 @@ export default function NavBar({user}: TopBarProps) {
   return (
     <nav className="navbar">
       <div className="navbar-brand">LeaseLog</div>
-      <NavButtons />
+      <NavButtons/>
       <UserButtons user={user}/>
     </nav>
   )

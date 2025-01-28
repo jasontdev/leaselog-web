@@ -13,7 +13,7 @@ export function Layout({children, user}: LayoutProps) {
     <div className="layout-container">
       <NavBar user={user}/>
       <div className="route-container">
-          {children}
+        {children}
       </div>
     </div>
   )

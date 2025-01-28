@@ -8,8 +8,8 @@ type ProtectedRouteProps = {
 }
 
 function ProtectedRoute({user, authenticating, children}: ProtectedRouteProps) {
-  if(!user && !authenticating) {
-    return (<Navigate to="/login" />);
+  if (!user && !authenticating) {
+    return (<Navigate to="/login"/>);
   }
 
   return children;

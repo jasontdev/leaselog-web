@@ -15,7 +15,9 @@ export default function UserButtons({user}: RightButtonProps) {
 
   return (
     <div>
-      {user? <button onClick={() => {logOut()}}>Logout</button> : <button onClick={() => logIn()}>Login</button>}
+      {user ? <button onClick={() => {
+        logOut()
+      }}>Logout</button> : <button onClick={() => logIn()}>Login</button>}
     </div>
   )
 }

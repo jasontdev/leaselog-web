@@ -31,9 +31,11 @@ function App() {
         <Routes>
           <Route index element={<ProtectedRoute user={user} authenticating={authenticating}><Home/></ProtectedRoute>}/>
           <Route path="login" element={<Login/>}/>
-          <Route path="leases" element={<ProtectedRoute user={user} authenticating={authenticating}><Leases /></ProtectedRoute>}/>
-          <Route path="payments" element={<ProtectedRoute user={user} authenticating={authenticating}><Payments /></ProtectedRoute>}/>
-          <Route path="contacts" element={<ProtectedRoute user={user} authenticating={authenticating}><Contacts /></ProtectedRoute>}/>
+          <Route path="leases" element={<ProtectedRoute user={user} authenticating={authenticating}><Leases/></ProtectedRoute>}/>
+          <Route path="payments"
+                 element={<ProtectedRoute user={user} authenticating={authenticating}><Payments/></ProtectedRoute>}/>
+          <Route path="contacts"
+                 element={<ProtectedRoute user={user} authenticating={authenticating}><Contacts/></ProtectedRoute>}/>
         </Routes>
       </Layout>
     </div>

@@ -1,4 +1,4 @@
-function Login() {
+function Landing() {
   return (
     <>
       <h1>Welcome to LeaseLog</h1>
@@ -7,4 +7,4 @@ function Login() {
   )
 }
 
-export default Login;
+export default Landing;

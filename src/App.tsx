@@ -6,35 +6,31 @@ import Leases from "./routes/Leases.tsx";
 import Payments from "./routes/Payments.tsx";
 import Contacts from "./routes/Contacts.tsx";
 import Home from "./routes/Home.tsx";
-
-async function getUserInfo() {
-  const response = await fetch('/.auth/me');
-  const payload = await response.json();
-  const { clientPrincipal } = payload;
-  return clientPrincipal;
-}
+import {getLeases} from "./data.ts";
+import {getUserInfo} from "./user.ts";
 
 const router = createBrowserRouter([
   {
     path: "/",
     loader: getUserInfo,
-    element: <Layout />,
+    element: <Layout/>,
     children: [
       {
-        element: <Home />,
+        element: <Home/>,
         index: true
       },
       {
         path: "leases",
-        element: <Leases />
+        loader: getLeases,
+        element: <Leases/>,
       },
       {
         path: "payments",
-        element: <Payments />
+        element: <Payments/>
       },
       {
         path: "contacts",
-        element: <Contacts />
+        element: <Contacts/>
       }
     ]
   }
@@ -43,7 +39,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
-        <RouterProvider router={router} />
+      <RouterProvider router={router}/>
     </div>
   );
 }

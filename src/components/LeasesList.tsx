@@ -1,5 +1,4 @@
 import {Lease} from "../data.ts";
-import "./LeastList.css";
 
 type LeasesListProps = {
   leases: Lease[];
@@ -7,8 +6,8 @@ type LeasesListProps = {
 
 export function LeasesList({leases}: LeasesListProps) {
   return (
-    <table className="leaselist-table">
-      <thead className="leaselist-th">
+    <table>
+      <thead>
       <tr>
         <th>Name</th>
         <th>Tenant</th>

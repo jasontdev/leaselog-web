@@ -1,13 +1,13 @@
-import "./NavButtons.css";
 import {useNavigate} from "react-router-dom";
+import {Button} from "./ui/button.tsx";
 
 export default function NavButtons() {
   const navigate = useNavigate();
 
-  return (<div className="nav-buttons">
-    <button onClick={() => navigate("/")}>Home</button>
-    <button onClick={() => navigate("leases")}>Leases</button>
-    <button onClick={() => navigate("payments")}>Payments</button>
-    <button onClick={() => navigate("contacts")}>Contacts</button>
+  return (<div>
+    <Button onClick={() => navigate("/")}>Home</Button>
+    <Button onClick={() => navigate("leases")}>Leases</Button>
+    <Button onClick={() => navigate("payments")}>Payments</Button>
+    <Button onClick={() => navigate("contacts")}>Contacts</Button>
   </div>);
 }
